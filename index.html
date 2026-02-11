@@ -2,12 +2,32 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/compatibility/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>相性診断</title>
+    <title>相性診断 | えぐしゅぎ ラボ</title>
+    <!-- OGP -->
+    <meta property="og:title" content="相性診断 | えぐしゅぎ ラボ" />
+    <meta property="og:description" content="2人の名前で相性を診断！友達や恋人との相性チェック" />
+    <meta property="og:image" content="/compatibility/og-image.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="相性診断 | えぐしゅぎ ラボ" />
+    <meta name="twitter:description" content="2人の名前で相性を診断！友達や恋人との相性チェック" />
+    <meta name="twitter:image" content="/compatibility/og-image.png" />
+    <meta name="description" content="2人の名前で相性を診断！友達や恋人との相性チェック" />
+    <!-- PWA -->
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="manifest" href="/compatibility/manifest.json" />
+    <link rel="apple-touch-icon" href="/compatibility/icon-192.png" />
+    <link rel="icon" href="/compatibility/icon-192.png" type="image/png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- サービスワーカー登録 -->
+    <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/compatibility/sw.js')}</script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script>
   </body>
 </html>
